@@ -1,0 +1,9 @@
+{
+	"name": "covidreportproject",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "1ca18668-0f7f-41cd-b464-8199a3b98de9",
+		"tenantId": "28b966a6-604f-47b9-894a-e27d486378c6"
+	}
+}

@@ -1,0 +1,37 @@
+{
+	"name": "pl_process_testing_data",
+	"properties": {
+		"activities": [
+			{
+				"name": "Process Testing Data",
+				"type": "HDInsightHive",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"scriptPath": "script/covid_transform_testing.hql",
+					"scriptLinkedService": {
+						"referenceName": "ls_source_ablob_covidreporting24blob",
+						"type": "LinkedServiceReference"
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ls_hdi_covid_cluster",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"folder": {
+			"name": "Processed"
+		},
+		"annotations": [],
+		"lastPublishTime": "2024-09-17T11:47:58Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
